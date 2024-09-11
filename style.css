@@ -1,0 +1,64 @@
+section {
+    font-family: "Comic Sans MS", serif;
+}
+
+header {
+    color: black;
+    background-color: deepskyblue;
+}
+
+.logo {
+    text-align: center;
+}
+
+.main__quote {
+    white-space: nowrap;
+    color: white;
+    line-height: 80%;
+}
+
+.menu__bar {
+    color: red;
+    line-height: 150%;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+main {
+    color : #6F0901;
+    background-color: #FFF59E;
+}
+
+.menu__item__name {
+    line-height: 0;
+}
+
+.menu__item {
+    line-height: 100%;
+    text-decoration: green wavy underline;
+}
+
+.menu__item__composition {
+    text-indent: 2%;
+}
+
+.menu__warning {
+    text-transform: lowercase;
+    font-size: x-small;
+}
+
+footer {
+    color : black;
+    background-color: white;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+.contacts {
+    text-transform: uppercase;
+}
+
+.resize {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
