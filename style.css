@@ -1,48 +1,50 @@
-section {
-    font-family: "Comic Sans MS", serif;
-}
-
 header {
     color: black;
     background-color: deepskyblue;
 }
 
-.logo {
+.header__logo {
     text-align: center;
 }
 
-.main__quote {
+.header__title {
     white-space: nowrap;
     color: white;
     line-height: 80%;
 }
 
-.menu__bar {
+.menu {
     color: red;
     line-height: 150%;
     text-decoration: underline;
     text-decoration-color: black;
 }
 
+.menu__link {
+    font-size: x-large;
+    font-style: oblique;
+}
+
 main {
     color : #6F0901;
     background-color: #FFF59E;
+    font-family: "Comic Sans MS", serif;
 }
 
-.menu__item__name {
-    line-height: 0;
-}
-
-.menu__item {
+.catalog__item {
     line-height: 100%;
     text-decoration: green wavy underline;
 }
 
-.menu__item__composition {
+.catalog__item__name {
+    line-height: 0;
+}
+
+.catalog__item__composition {
     text-indent: 2%;
 }
 
-.menu__warning {
+.warning {
     text-transform: lowercase;
     font-size: x-small;
 }
