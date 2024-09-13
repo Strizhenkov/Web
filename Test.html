@@ -7,86 +7,95 @@
     <title>PizzaCafeMenu</title>
 </head>
 <body>
-    <header>
-        <pre class="logo">
+    <header class="header">
+        <pre class="header__logo">
    ,#####.
    ,# \ | / #.
    #----|----#
    `# / | \ #'
-   `#####'</pre><h1 class="main__quote"><strong>PIZZA COMPANY</strong>   --
+   `#####'</pre><h1 class="header__title"><strong>PIZZA COMPANY</strong>   --
         --  <em>Самая вкусная пицца!</em></h1>
-        <nav><h2 class="menu__bar">Меню:   <cite>Пицца</cite>   <cite>Закуски</cite>   <cite>Напитки</cite></h2></nav>
+        <div class="menu">
+            <h2 class="menu__header">Меню:</h2>
+            <nav>
+                <a class="menu__link">Пицца</a>
+                <a class="menu__link">Закуски</a>
+                <a class="menu__link">Напитки</a>
+            </nav>
+        </div>
     </header>
     <main>
-        <section>
-            <h3>Алгоритм создания заказа:</h3>
+        <div class="manual">
+            <h2 class="manual__head">Алгоритм создания заказа:</h2>
             <ol>
-                <li>Выбрать позиции для заказа</li>
-                <li>Сообщить ваш заказ по:
+                <li class="manual__option">Выбрать позиции для заказа</li>
+                <li class="manual__option">Сообщить ваш заказ по:
                     <ol start=1 type=A>
-                        <li>Номеру телефона</li>
-                        <li>Телеграмм боту</li>
+                        <li class="manual__option">Номеру телефона</li>
+                        <li class="manual__option">Телеграмм боту</li>
                     </ol>
                 </li>
-                <li>Дождаться вашего заказа</li>
+                <li class="manual__option">Дождаться вашего заказа</li>
             </ol>
-        </section>
-        <section>
-            <h3>Пицца:</h3>
-            <ul>
-                <li class="menu__item"><h4 class="menu__item__name">Маргарита -- 200<sup>руб</sup></h4>
-                    <img alt="Pizza margarita"  src="images/pizza1.jpg" class="resize">
-                    <section class="menu__item__composition">   Состав: тесто, томатная паста, мацарела, помидоры, травы и специи.</section>
-                </li>
-                <li class="menu__item"><h4 class="menu__item__name">Пепперони -- 250<sup>руб</sup></h4>
-                    <img alt="Pizza pepperoni"  src="images/pizza2.jpg" class="resize">
-                    <section class="menu__item__composition">   Состав: тесто, томатная паста, мацарела, пепперони, травы и специи.</section>
-                </li>
-                <li class="menu__item"><h4 class="menu__item__name">4 Сыра -- 250<sup>руб</sup></h4>
-                    <img alt="Pizza 4 cheeses"  src="images/pizza3.jpg" class="resize">
-                    <section class="menu__item__composition">   Состав: тесто, томатная паста, мацарела, пармезан, горгонзола, фонтина, травы и специи.</section>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h3>Закуски:</h3>
-            <ul>
-                <li class="menu__item"><h4 class="menu__item__name">Картофель фри -- 120<sup>руб</sup></h4>
-                    <section class="menu__item__composition">   Состав: картофель фри, соль и специи.</section>
-                </li>
-                <li class="menu__item"><h4 class="menu__item__name">Куринны крылышки -- 150<sup>руб</sup></h4>
-                    <section class="menu__item__composition">   Состав: куринные крылья, соус гриль, соль и специи.</section>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h3>Напитки:</h3>
-            <ul>
-                <li class="menu__item"><h4 class="menu__item__name">Заварной чай -- 70<sup>руб</sup></h4>
-                    <section class="menu__item__composition">   Состав: травы, сахар и вода.</section>
-                </li>
-                <li class="menu__item"><h4 class="menu__item__name">Кофе -- 90<sup>руб</sup></h4>
-                    <section class="menu__item__composition">   Состав: кофейные зерна, сливки, сахар и вода.</section>
-                </li>
-                <li class="menu__item"><h4 class="menu__item__name">Вода -- 50<sup>руб</sup></h4>
-                    <section class="menu__item__composition">   Состав: вода.</section>
-                </li>
-                <li class="menu__item"><h4 class="menu__item__name">Лимонад -- 100<sup>руб</sup></h4>
-                    <section class="menu__item__composition">   Состав: газированная вода, лимоннный сок, сахар и лед.</section>
-                </li>
-            </ul>
-        </section>
-        <article class="menu__warning"><h3>Некоторые продукты могут содержать потенциальные аллергены для некоторых потребителей. Будте внимательны при выборе товаров и обращайте внимание на состав изделий!</h3></article>
+        </div>
+        <div class="catalog">
+            <section class="catalog__section">
+                <h3>Пицца:</h3>
+                <ul>
+                    <li class="catalog__item"><h4 class="catalog__item__name">Маргарита -- 200<sup>руб</sup></h4>
+                        <img alt="Pizza margarita"  src="images/pizza1.jpg" class="resize">
+                        <span class="catalog__item__composition">   Состав: тесто, томатная паста, мацарела, помидоры, травы и специи.</span>
+                    </li>
+                    <li class="catalog__item"><h4 class="catalog__item__name">Пепперони -- 250<sup>руб</sup></h4>
+                        <img alt="Pizza pepperoni"  src="images/pizza2.jpg" class="resize">
+                        <span class="catalog__item__composition">   Состав: тесто, томатная паста, мацарела, пепперони, травы и специи.</span>
+                    </li>
+                    <li class="catalog__item"><h4 class="catalog__item__name">4 Сыра -- 250<sup>руб</sup></h4>
+                        <img alt="Pizza 4 cheeses"  src="images/pizza3.jpg" class="resize">
+                        <span class="catalog__item__composition">   Состав: тесто, томатная паста, мацарела, пармезан, горгонзола, фонтина, травы и специи.</span>
+                    </li>
+                </ul>
+            </section>
+            <section class="catalog__section">
+                <h3>Закуски:</h3>
+                <ul>
+                    <li class="catalog__item"><h4 class="catalog__item__name">Картофель фри -- 120<sup>руб</sup></h4>
+                        <span class="catalog__item__composition">   Состав: картофель фри, соль и специи.</span>
+                    </li>
+                    <li class="catalog__item"><h4 class="catalog__item__name">Куринны крылышки -- 150<sup>руб</sup></h4>
+                        <span class="catalog__item__composition">   Состав: куринные крылья, соус гриль, соль и специи.</span>
+                    </li>
+                </ul>
+            </section>
+            <section  class="catalog__section">
+                <h3>Напитки:</h3>
+                <ul>
+                    <li class="catalog__item"><h4 class="catalog__item__name">Заварной чай -- 70<sup>руб</sup></h4>
+                        <span class="catalog__item__composition">   Состав: травы, сахар и вода.</span>
+                    </li>
+                    <li class="catalog__item"><h4 class="catalog__item__name">Кофе -- 90<sup>руб</sup></h4>
+                        <span class="catalog__item__composition">   Состав: кофейные зерна, сливки, сахар и вода.</span>
+                    </li>
+                    <li class="catalog__item"><h4 class="catalog__item__name">Вода -- 50<sup>руб</sup></h4>
+                        <span class="catalog__item__composition">   Состав: вода.</span>
+                    </li>
+                    <li class="catalog__item"><h4 class="catalog__item__name">Лимонад -- 100<sup>руб</sup></h4>
+                        <span class="catalog__item__composition">   Состав: газированная вода, лимоннный сок, сахар и лед.</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <article class="warning"><h3>Некоторые продукты могут содержать потенциальные аллергены для некоторых потребителей. Будте внимательны при выборе товаров и обращайте внимание на состав изделий!</h3></article>
     </main>
     <footer>
-        <section>
-            <h2 class="contacts">Контакты:</h2>
+        <div class="contact">
+            <h2 class="contact_title">Контакты:</h2>
             <ul>
-                <li>Телефон: 5-555-555-55-55</li>
-                <li>Телеграмм бот: @pizzaBot</li>
-                <li>Электронная почта: pizza@mail.ru</li>
+                <li class="contact__option">Телефон: 5-555-555-55-55</li>
+                <li class="contact__option">Телеграмм бот: @pizzaBot</li>
+                <li class="contact__option">Электронная почта: pizza@mail.ru</li>
             </ul>
-        </section>
+        </div>
     </footer>
 </body>
 </html>
