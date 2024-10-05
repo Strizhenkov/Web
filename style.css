@@ -1,0 +1,66 @@
+header {
+    color: black;
+    background-color: deepskyblue;
+}
+
+.header__logo {
+    text-align: center;
+}
+
+.header__title {
+    white-space: nowrap;
+    color: white;
+    line-height: 80%;
+}
+
+.menu {
+    color: red;
+    line-height: 150%;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.menu__link {
+    font-size: x-large;
+    font-style: oblique;
+}
+
+main {
+    color : #6F0901;
+    background-color: #FFF59E;
+    font-family: "Comic Sans MS", serif;
+}
+
+.catalog__item {
+    line-height: 100%;
+    text-decoration: green wavy underline;
+}
+
+.catalog__item__name {
+    line-height: 0;
+}
+
+.catalog__item__composition {
+    text-indent: 2%;
+}
+
+.warning {
+    text-transform: lowercase;
+    font-size: x-small;
+}
+
+footer {
+    color : black;
+    background-color: white;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+.contacts {
+    text-transform: uppercase;
+}
+
+.resize {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
