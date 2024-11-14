@@ -1,3 +1,9 @@
+@media (min-width: 576px) and (max-width: 1999.98px) {
+    .header__logo {
+        color: deepskyblue;
+    }
+}
+
 header {
     color: black;
     background-color: deepskyblue;
@@ -21,6 +27,7 @@ header {
 }
 
 .menu__link {
+    color : burlywood;
     font-size: x-large;
     font-style: oblique;
 }
@@ -28,30 +35,35 @@ header {
 main {
     color : #6F0901;
     background-color: #FFF59E;
-    font-family: "Comic Sans MS", serif;
 }
 
 .catalog__item {
+    font-family: "Comic Sans MS", serif;
     line-height: 100%;
     text-decoration: green wavy underline;
 }
 
 .catalog__item__name {
+    font-family: "Comic Sans MS", serif;
     line-height: 0;
 }
 
 .catalog__item__composition {
+    font-family: "Comic Sans MS", serif;
     text-indent: 2%;
 }
 
 .warning {
+    font-family: "Comic Sans MS", serif;
     text-transform: lowercase;
     font-size: x-small;
 }
 
 footer {
+    position: sticky;
+    bottom: 0;
     color : black;
-    background-color: white;
+    background-color: lime;
     text-shadow: #FC0 1px 0 10px;
 }
 
@@ -63,4 +75,28 @@ footer {
     width: 60px;
     height: auto;
     filter: drop-shadow(0 0 0.75rem crimson);
+}
+
+.gift__information {
+    width: screen;
+    padding: 25px;
+}
+
+.gift__information tr:nth-child(even){
+    font-family: cursive;
+    font-size: x-large;
+}
+
+.dino__pictute {
+    width: 40px;
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem lime);
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
 }
