@@ -27,7 +27,7 @@ header {
 }
 
 .menu__link {
-    color : burlywood;
+    color : purple;
     font-size: x-large;
     font-style: oblique;
 }
@@ -99,4 +99,11 @@ footer {
 
 .negative {
     color: red;
+}
+
+nav a.active{
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: #ffcc00;
+    color: #000;
 }
