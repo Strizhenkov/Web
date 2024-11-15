@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="pizza" content="pizzaWebsite">
+    <link href="style.css" rel="stylesheet">
+    <script src = "js/script.js" defer></script>
+    <title>PizzaCafeMenu</title>
+</head>
+<body>
+    <header class="header">
+        <pre class="header__logo">
+   ,#####.
+   ,# \ | / #.
+   #----|----#
+   `# / | \ #'
+   `#####'</pre><h1 class="header__title"><strong>PIZZA COMPANY</strong>   --
+        --  <em>Самая вкусная пицца!</em></h1>
+        <div class="menu">
+            <h2 class="menu__header">Меню:</h2>
+            <nav>
+                <a class="menu__link" href="main.html">Главная страница</a>
+                <a class="menu__link" href="pizza.html">Пицца</a>
+                <a class="menu__link" href="snacks.html">Закуски</a>
+                <a class="menu__link" href="drinks.html">Напитки</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="manual">
+            <h2 class="manual__head">Алгоритм создания заказа:</h2>
+            <ol>
+                <li class="manual__option">Выбрать позиции для заказа</li>
+                <li class="manual__option">Сообщить ваш заказ по:
+                    <ol start=1 type=A>
+                        <li class="manual__option">Номеру телефона</li>
+                        <li class="manual__option">Телеграмм боту</li>
+                    </ol>
+                </li>
+                <li class="manual__option">Дождаться вашего заказа</li>
+            </ol>
+        </div>
+        <article class="warning"><h3>Некоторые продукты могут содержать потенциальные аллергены для некоторых потребителей. Будте внимательны при выборе товаров и обращайте внимание на состав изделий!</h3></article>
+        <div class="gift">
+            <h2 class="gift__header">Динозавры монстры - подарок при заказе от 1000<sup>руб</sup>:</h2>
+            <table class="gift__information" bordercolor="green">
+                <tr>
+                    <th>Картинка</th>
+                    <th>Редкость</th>
+                    <th>Размер</th>
+                    <th>Есть в наличии</th>
+                </tr>
+                <tr>
+                    <th><img alt="DinoMonster1"  src="images/dino1.jpg" class="dino__pictute"></th>
+                    <th style="color:blueviolet">Ультра редкий</th>
+                    <th>S</th>
+                    <th class="positive">Есть</th>
+                </tr>
+                <tr>
+                    <th><img alt="DinoMonster2"  src="images/dino2.jpg" class="dino__pictute"></th>
+                    <th style="color:red">Супер редкий</th>
+                    <th>XL</th>
+                    <th class="positive">Есть</th>
+                </tr>
+                <tr>
+                    <th><img alt="DinoMonster3"  src="images/dino3.jpg" class="dino__pictute"></th>
+                    <th style="color:blue">Редкий</th>
+                    <th>L</th>
+                    <th class="negative">Кончились</th>
+                </tr>
+                <tr>
+                    <th><img alt="DinoMonster4"  src="images/dino4.jpg" class="dino__pictute"></th>
+                    <th style="color:lime">Необычный</th>
+                    <th>L</th>
+                    <th class="positive">Есть</th>
+                </tr>
+                <tr>
+                    <th><img alt="DinoMonster5"  src="images/dino5.jpg" class="dino__pictute"></th>
+                    <th style="color:grey">Обычный</th>
+                    <th>M</th>
+                    <th class="positive">Есть</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="contact">
+            <h2 class="contact_title">Контакты:</h2>
+            <ul>
+                <li class="contact__option">Телефон: 5-555-555-55-55</li>
+                <li class="contact__option">Телеграмм бот: @pizzaBot</li>
+                <li class="contact__option">Электронная почта: pizza@mail.ru</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
