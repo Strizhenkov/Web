@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="shedule">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Конструктор Расписания</h1>
+
+    <form id="scheduleForm">
+        <label for="weekType">Тип недели:</label>
+        <select name="weekType">
+            <option value="5">5-дневная неделя</option>
+            <option value="6">6-дневная неделя</option>
+        </select>
+
+        <label for="maxLessons">Максимальное количество занятий в день:</label>
+        <input type="number" name="maxLessons" min="1" max="10" value="6">
+
+        <label for="language">Язык:</label>
+        <select name="language">
+            <option value="ru">Русский</option>
+            <option value="en">Английский</option>
+        </select>
+
+        <button type="submit">Создать расписание</button>
+    </form>
+
+    <div id="scheduleResult"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scheduleForm = document.getElementById('scheduleForm');
+            const scheduleResult = document.getElementById('scheduleResult');
+
+            scheduleForm.weekType.value = localStorage.getItem('weekType');
+            scheduleForm.maxLessons.value = localStorage.getItem('maxLessons');
+            scheduleForm.language.value = localStorage.getItem('language');
+
+            generateShedule();
+
+            scheduleForm.onsubmit = function(event) {
+                event.preventDefault();
+                localStorage.setItem('weekType', scheduleForm.weekType.value);
+                localStorage.setItem('maxLessons', scheduleForm.maxLessons.value);
+                localStorage.setItem('language', scheduleForm.language.value);
+                generateShedule();
+            };
+
+
+            function generateShedule() {
+                var weekDays = scheduleForm.weekType.value === '5' 
+                    ? (scheduleForm.language.value === 'ru' ? ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница'] : ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])
+                    : (scheduleForm.language.value === 'ru' ? ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'] : ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']);
+                var maxLessons = parseInt(scheduleForm.maxLessons.value);
+                var language = scheduleForm.language.value;
+
+                var tableHtml = '<table border="1"><thead><tr><th>' + (language === 'ru' ? 'День недели' : 'Day of the Week') + '</th>';
+                for (let i = 1; i <= maxLessons; i++) {
+                    tableHtml += `<th>${language === 'ru' ? 'Урок' : 'Lesson'} ${i}</th>`;
+                }
+                tableHtml += '</tr></thead><tbody>';
+
+                    weekDays.forEach((day, dayIndex) => {
+                    tableHtml += `<tr><td>${day}</td>`;
+                    for (let i = 1; i <= maxLessons; i++) {
+                        tableHtml += `<td><input type="text" id="cell-${dayIndex}-${i}" /></td>`;
+                    }
+                    tableHtml += '</tr>';
+                });
+                tableHtml += '</tbody></table>';
+
+                scheduleResult.innerHTML = tableHtml;
+
+                weekDays.forEach((day, dayIndex) => {
+                    for (let i = 1; i <= maxLessons; i++) {
+                        const cellValue = localStorage.getItem(`cell-${dayIndex}-${i}`);
+                        if (cellValue) {
+                            document.getElementById(`cell-${dayIndex}-${i}`).value = cellValue;
+                        }
+                    }
+                });
+
+                weekDays.forEach((day, dayIndex) => {
+                    for (let i = 1; i <= maxLessons; i++) {
+                        const cell = document.getElementById(`cell-${dayIndex}-${i}`);
+                        cell.addEventListener('input', () => {
+                            localStorage.setItem(`cell-${dayIndex}-${i}`, cell.value);
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

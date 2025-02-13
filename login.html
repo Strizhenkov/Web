@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Fetcher</title>
+    <style>
+        #preloader {
+            display: none;
+            margin: 20px auto;
+            text-align: center;
+        }
+        #preloader img {
+            padding-top: 200px; 
+            width: 500px;
+            height: 500px;
+            animation: spin 0.1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="preloader">
+            <img src="C:\Users\gstri\WebstormProjects\LabWeb\LabWeb2\images\cat-what.gif" alt="Loading...">
+        </div>
+        <div id="content"></div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

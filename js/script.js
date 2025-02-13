@@ -7,7 +7,7 @@
     });
 
     
-    const menuItems = document.querySelectorAll('nav a');
+    const menuItems = document.querySelectorAll(".menu__link");
     const currentPage = document.location.pathname.split('/').pop();
 
     menuItems.forEach(item => {

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .button-container {
+            text-align: center;
+        }
+        button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-red {
+            background-color: #ff6b6b;
+            color: white;
+        }
+        .btn-green {
+            background-color: #1dd1a1;
+            color: white;
+        }
+        .btn-blue {
+            background-color: #54a0ff;
+            color: white;
+        }
+        .btn-custom {
+            background-color: #ffa502;
+            color:navy;
+            padding: 15px 30px;
+            font-size: x-large;
+            font-style: italic;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="btn-red" onclick="showRedToast()">Red Button</button>
+        <button class="btn-green" onclick="showGreenToast()">Green Button</button>
+        <button class="btn-blue" onclick="showBlueToast()">Blue Button</button>
+        <button class="btn-custom" onclick="showCustomToast()">Custom Button</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <script>
+        function showRedToast() {
+            iziToast.error({
+                title: 'Error!',
+                message: 'Red button',
+                position: 'topRight'
+            });
+        }
+
+        function showGreenToast() {
+            iziToast.success({
+                title: 'Success!',
+                message: 'Green button',
+                position: 'bottomRight'
+            });
+        }
+
+        function showBlueToast() {
+            iziToast.info({
+                title: 'Info!',
+                message: 'Blue button',
+                position: 'topLeft'
+            });
+        }
+
+        function showCustomToast() {
+            iziToast.warning({
+                title: 'Test!',
+                message: 'Custom button',
+                position: 'bottomLeft',
+                image: 'https://abtechsolutions.ca/wp-content/uploads/2019/02/Test.png',
+                transitionIn: 'bounceInLeft',
+                transitionOut: 'fadeOutRight',
+            });
+        }
+    </script>
+</body>
+</html>
